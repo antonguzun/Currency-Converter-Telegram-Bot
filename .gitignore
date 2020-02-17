@@ -1,0 +1,10 @@
+/.env
+/currency_converter.db
+*.png
+*.pyc
+*.pyo
+*.ipynb
+.idea
+.idea/*
+.vscode
+.coverage
