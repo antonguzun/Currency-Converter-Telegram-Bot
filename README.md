@@ -3,7 +3,7 @@
 create .env file with field 
 `TOKEN=your_token`
 
-install venv, pip, setuptools
+create venv, install pip and setuptools
 
 run commands:
 ```
