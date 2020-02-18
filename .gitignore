@@ -1,5 +1,7 @@
 /.env
 /currency_converter.db
+/Dockerfile
+/black.toml
 *.png
 *.pyc
 *.pyo
@@ -8,5 +10,3 @@
 .idea/*
 .vscode
 .coverage
-/Dockerfile
-/black.toml
