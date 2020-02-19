@@ -12,3 +12,13 @@ build:
 
 run:
 	$(PYTHON) bot.py
+
+build-docker:
+	sudo docker image build -t bot_image .
+	sudo docker container create bot_image
+
+run-container:
+	sudo docker container run bot_image
+
+make-all:
+	make build-docker && make run-container

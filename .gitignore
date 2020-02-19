@@ -1,6 +1,5 @@
 /.env
 /currency_converter.db
-/Dockerfile
 /black.toml
 *.png
 *.pyc

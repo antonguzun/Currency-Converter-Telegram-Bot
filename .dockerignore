@@ -1,0 +1,5 @@
+.git
+.**/*.db
+.**/*.png
+_media
+venv

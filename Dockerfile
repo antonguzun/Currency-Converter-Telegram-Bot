@@ -1,23 +1,13 @@
-FROM python:3.7.6-alpine3.11
+FROM python:3.6-slim
+
+COPY . /app
 WORKDIR /app
 
-#RUN set -ex \
-#    && apk add --no-cache -t build-deps \
-#        alpine-sdk \
-#        linux-headers \
-#        jpeg-dev
-RUN apk update && apk add gcc libc-dev make git libffi-dev openssl-dev python3-dev libxml2-dev libxslt-dev
+RUN pip install --no-cache-dir -r requirements.txt
 
+RUN mkdir _media
+VOLUME /_media
 
-RUN set -ex \
-    && pip install -U \
-        pip \
-        pip-tools \
-        setuptools
+CMD python init_db.py
+CMD python bot.py
 
-COPY ./requirements.txt ./requirements.txt
-
-RUN set -ex \
-    && pip install --no-cache-dir  -r requirements.txt
-
-CMD [ "python", "./bot.py" ]
