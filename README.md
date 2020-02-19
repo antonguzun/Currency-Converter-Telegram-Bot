@@ -3,12 +3,11 @@
 create .env file with field 
 `TOKEN=your_token`
 
-create venv, install pip and setuptools
+install docker
 
-run commands:
+run command:
 ```
-make build
-make run
+make make-all
 ```
 
 Use command /help in bot chat for more info
